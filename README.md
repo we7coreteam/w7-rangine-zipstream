@@ -4,8 +4,9 @@
 # 使用
 
 ```
+//配置options与原始库配置一样
+//需要指定 outputStream 为 Swoole Response对象
 $options = new \ZipStream\Option\Archive();
-//开启设置下载头部信息
 $options->setSendHttpHeaders(true);
 //指定 output 对象为 swoole response对象
 $options->setOutputStream($this->response());
