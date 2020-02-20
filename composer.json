@@ -1,8 +1,26 @@
 {
     "name": "w7/rangine-zipstream",
     "type": "library",
+    "keywords": [
+        "php",
+        "swoole",
+        "zipstream-php"
+    ],
+    "description": "zipstream-php for swoole",
+    "license": "Apache-2.0",
     "require": {
-        "maennchen/zipstream-php": "*"
+        "maennchen/zipstream-php": "*",
+        "w7/rangine-http-message": "^2.0",
+        "swoole/ide-helper": "^4.4"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "W7\\ZipStream\\": "src/"
+        }
     },
     "authors": [
         {
