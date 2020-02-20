@@ -1,0 +1,13 @@
+{
+    "name": "w7/rangine-zipstream",
+    "type": "library",
+    "require": {
+        "maennchen/zipstream-php": "*"
+    },
+    "authors": [
+        {
+            "name": "Rangine Team",
+            "email": "donknap@gmail.com"
+        }
+    ]
+}
