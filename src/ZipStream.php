@@ -54,7 +54,7 @@ class ZipStream extends \ZipStream\ZipStream {
 	protected function withSendHeader($headerString): void {
 		list($name, $value) = explode(': ', $headerString);
 		if (empty($name) || empty($value)) {
-			return false;
+			return;
 		}
 		$this->response = $this->response->withHeader($name, $value);
 	}
