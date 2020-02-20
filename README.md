@@ -3,15 +3,17 @@
 
 # 使用
 
+配置 options 与原始库一样，只是需要指定 outputStream 为 Swoole Respons 对象。
+
+\W7\ZipStream\ZipStream 对象继承自 \ZipStream\ZipStream 对象，只是重写了 Send 方法。
+使用方法与原始库一致。
+
 ```
-//配置options与原始库配置一样
-//需要指定 outputStream 为 Swoole Response对象
 $options = new \ZipStream\Option\Archive();
 $options->setSendHttpHeaders(true);
 //指定 output 对象为 swoole response对象
 $options->setOutputStream($this->response());
 
-//新建zip对象，动态的写入数据，将会同时下载
 $zip = new \W7\ZipStream\ZipStream('example.zip', $options);
 for ($i=0; $i<100000; $i++) {
     $zip->addFile($i, 'test');
